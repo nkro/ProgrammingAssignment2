@@ -1,3 +1,11 @@
+## the specific purpose here is to create an object that both holds a matrix and its inverse.
+## it takes one argument, which is a square invertible matrix and it holds this value
+## in whatever object this function is assigned to, this matrix will be accesable by four functions, which are stored as a list
+## set, get, setmatrixinverse, getmatrixinverse
+## the latter function returns the inverse
+## but it is not necesary for these to be caclulated repetitively. if it has already been done, it will cache it.
+## this works in conjunction with the function cacheSolve, which checks if it is cached or needs to be solved
+
 makeCacheMatrix <- function (m = matrix()){
 	i <- NULL ## if you are creating the instance for the 1st time, there can be nothing cached so i is null
 	set <- function(y) { ## if you want to change the original argument/matrix
